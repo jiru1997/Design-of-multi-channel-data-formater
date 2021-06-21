@@ -1,2 +1,4 @@
 # Design-of-multi-channel-data-formater
 Design of multi channel data formater
+
+MCDF stands for multi-channel data formatter, it can push the data from uplinks into the inner FIFO and output it as the data packet. MCDF can be used in the scenario when the data protocol between uplink and downlink is different. In addition, it also has the interface of the registers, so it supports several control functions. For the structure of MCDF, it can be divided into several parts, like the uplink channel module, which is in charge of receiving data from uplink and pushing it into the corresponding FIFO. It also has an arbiter module which can select data from different channels and send data for the formatter. The formatter can send out the data to downlink and the registers have the specific interface to receive the control data and modify the function of the MCDF correspondingly.
